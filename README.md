@@ -1,24 +1,17 @@
-# F1 Lap Vault v3
+# F1 Lap Vault v2
 
-Mobile-optimierte GitHub-Pages-Webapp für Rundenzeiten, Delta und Setups.
+Mobile-optimierte GitHub-Pages-Webapp für F1 25/26.
 
-## v3
-- App-Logo als SVG: `assets/logo.svg`
-- Favicon und Apple-Touch-Icon eingebunden
-- Rundenzeit mit Fahrer/Fahrzeughalter, Reifen, Session und Delta
-- Delta ohne Sektorzeiten
-- Setup-Struktur im Stil des F1-Ingame-Setup-Menüs:
-  - Aerodynamik
-  - Differential
-  - Fahrwerksgeometrie
-  - Aufhängung
-  - Bremsen
-  - Reifendruck
-  - Trocken/Nass
-- lokale Speicherung via localStorage
-- keine Backend-Abhängigkeit
+Neu in v2:
+- Delta-Zeit pro Runde ohne Sektorzeiten
+- Fahrzeughalter / Fahrer als Pflichtfeld bei Runden
+- Fahrzeughalter auch bei Setups
+- Delta wird in der Rundenliste und bei der Bestzeit angezeigt
+- Positive Delta-Zeit = rot, negative/Null = grün
+- Weiterhin lokale Speicherung via localStorage
 
-## GitHub Pages
-Repository erstellen → Dateien hochladen → Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
-
-Hinweis: F1 Lap Vault ist ein unabhängiges Community-Tool und kein offizielles EA/Codemasters-Produkt. Es verwendet keine offiziellen Spielassets.
+GitHub Pages:
+1. Dateien in ein Repository laden.
+2. Settings → Pages.
+3. Deploy from a branch.
+4. `main` + `/ (root)` auswählen.

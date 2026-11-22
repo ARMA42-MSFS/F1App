@@ -1,41 +1,88 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07080c"><meta name="description" content="F1 Lap Vault – Rundenzeiten, Delta und F1-inspirierte Setups">
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/logo.svg"><link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07080c">
 <title>F1 Lap Vault</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
-<header class="topbar"><div class="brand"><img src="assets/logo.svg" alt="F1 Lap Vault Logo"><div><div class="eyebrow">F1 LAP VAULT · 25/26</div><h1>Runden & Setups</h1></div></div></header>
+<header class="topbar">
+  <div><div class="eyebrow">F1 LAP VAULT · 25/26</div><h1>Runden & Setups</h1></div>
+</header>
+
 <main>
-<section class="hero"><div class="hero-label">BEST LAP</div><div class="hero-time" id="heroBest">--:--.---</div><div class="hero-meta"><span id="heroTrack">Noch keine Runde</span><span id="heroDelta">Δ --</span></div></section>
-<nav class="tabs"><button class="tab active" data-view="laps">LAPS</button><button class="tab" data-view="setup">SETUP</button></nav>
+<section class="hero">
+  <div class="hero-label">BEST LAP</div>
+  <div class="hero-time" id="heroBest">--:--.---</div>
+  <div class="hero-meta"><span id="heroTrack">Noch keine Runde</span><span id="heroDelta">Δ --</span></div>
+</section>
+
+<nav class="tabs"><button class="tab active" data-view="laps">LAPS</button><button class="tab" data-view="setup">SETUPS</button></nav>
+
 <section id="lapsView" class="view active">
-<div class="panel"><div class="panel-head"><h2>Neue Runde</h2><span class="status-dot">LOCAL</span></div>
-<form id="lapForm"><div class="grid two"><label>Strecke<select id="track" required></select></label><label>Fahrzeughalter<input id="owner" placeholder="z. B. Max Mustermann" required></label></div>
-<div class="grid two"><label>Session<select id="session"><option>Time Trial</option><option>Qualifying</option><option>Race</option><option>Practice</option></select></label><label>Reifen<select id="tyre"><option>Soft</option><option>Medium</option><option>Hard</option><option>Intermediate</option><option>Wet</option></select></label></div>
-<div class="time-inputs"><label>Min<input id="min" inputmode="numeric" maxlength="2" required></label><span>:</span><label>Sek<input id="sec" inputmode="numeric" maxlength="2" required></label><span>.</span><label>Millis<input id="ms" inputmode="numeric" maxlength="3" required></label></div>
+<div class="panel">
+<div class="panel-head"><h2>Neue Runde</h2><span class="status-dot">LOCAL</span></div>
+<form id="lapForm">
+<div class="grid two">
+<label>Strecke<select id="track" required></select></label>
+<label>Fahrzeughalter<input id="owner" placeholder="z. B. Max Mustermann" required></label>
+</div>
+<div class="grid two">
+<label>Session<select id="session"><option>Time Trial</option><option>Qualifying</option><option>Race</option><option>Practice</option></select></label>
+<label>Reifen<select id="tyre"><option>Soft</option><option>Medium</option><option>Hard</option><option>Intermediate</option><option>Wet</option></select></label>
+</div>
+<div class="time-inputs">
+<label>Min<input id="min" inputmode="numeric" maxlength="2" placeholder="1" required></label><span>:</span>
+<label>Sek<input id="sec" inputmode="numeric" maxlength="2" placeholder="21" required></label><span>.</span>
+<label>Millis<input id="ms" inputmode="numeric" maxlength="3" placeholder="456" required></label>
+</div>
 <label>Delta zur Referenz (optional)<input id="delta" inputmode="decimal" placeholder="+0.214 oder -0.214"></label>
 <label>Notiz<textarea id="note" rows="2" placeholder="z. B. gutes Exit aus Kurve 10"></textarea></label>
-<button class="primary" type="submit">+ RUN SPEICHERN</button></form></div>
-<div class="panel"><div class="panel-head"><h2>Gespeicherte Runden</h2><button id="clearLaps" class="text-btn">Alle löschen</button></div><div id="lapList" class="list"></div></div>
+<button class="primary" type="submit">+ RUN SPEICHERN</button>
+</form>
+</div>
+
+<div class="panel">
+<div class="panel-head"><h2>Gespeicherte Runden</h2><button id="clearLaps" class="text-btn">Alle löschen</button></div>
+<div id="lapList" class="list"></div>
+</div>
 </section>
+
 <section id="setupView" class="view">
-<div class="panel"><div class="panel-head"><h2>Setup wie im Spiel</h2><span class="status-dot">GARAGE</span></div>
+<div class="panel">
+<div class="panel-head"><h2>Setup speichern</h2><span class="status-dot">GARAGE</span></div>
 <form id="setupForm">
-<div class="grid two"><label>Strecke<select id="setupTrack" required></select></label><label>Fahrzeughalter<input id="setupOwner" placeholder="z. B. Max Mustermann" required></label></div>
-<div class="grid two"><label>Setup Name<input id="setupName" placeholder="Quali / Race" required></label><label>Wetter<select id="weather"><option>Trocken</option><option>Nass</option></select></label></div>
-<div class="setup-section"><h3>Aerodynamik</h3><div class="setup-grid"><label>Frontflügel<input id="frontWing" type="number" min="0" max="50" step="1"></label><label>Heckflügel<input id="rearWing" type="number" min="0" max="50" step="1"></label></div></div>
-<div class="setup-section"><h3>Differential</h3><div class="setup-grid"><label>On-Throttle<input id="diffOn" type="number" min="10" max="100"></label><label>Off-Throttle<input id="diffOff" type="number" min="10" max="100"></label></div></div>
-<div class="setup-section"><h3>Fahrwerksgeometrie</h3><div class="setup-grid"><label>Sturz vorne<input id="frontCamber" type="number" min="-3.5" max="-2.5" step="0.01"></label><label>Sturz hinten<input id="rearCamber" type="number" min="-2.2" max="-0.7" step="0.01"></label><label>Spur vorne<input id="frontToe" type="number" min="0" max="0.5" step="0.01"></label><label>Spur hinten<input id="rearToe" type="number" min="0" max="0.5" step="0.01"></label></div></div>
-<div class="setup-section"><h3>Aufhängung</h3><div class="setup-grid"><label>Federung vorne<input id="frontSusp" type="number" min="1" max="41"></label><label>Federung hinten<input id="rearSusp" type="number" min="1" max="41"></label><label>Stabilisator vorne<input id="frontArb" type="number" min="1" max="21"></label><label>Stabilisator hinten<input id="rearArb" type="number" min="1" max="21"></label><label>Fahrhöhe vorne<input id="frontRide" type="number" min="10" max="40"></label><label>Fahrhöhe hinten<input id="rearRide" type="number" min="40" max="100"></label></div></div>
-<div class="setup-section"><h3>Bremsen</h3><div class="setup-grid"><label>Bremsdruck<input id="brakePressure" type="number" min="80" max="100"></label><label>Bremsbalance vorne<input id="brakeBias" type="number" min="50" max="70" step="0.5"></label></div></div>
-<div class="setup-section"><h3>Reifendruck</h3><div class="setup-grid"><label>VR Druck<input id="frPressure" type="number" step="0.05"></label><label>VL Druck<input id="flPressure" type="number" step="0.05"></label><label>HR Druck<input id="rrPressure" type="number" step="0.05"></label><label>HL Druck<input id="rlPressure" type="number" step="0.05"></label></div></div>
-<label>Setup-Notiz<textarea id="setupNote" rows="3" placeholder="Fahrgefühl, Reifen, Wetter, Besonderheiten..."></textarea></label><button class="primary" type="submit">+ SETUP SPEICHERN</button></form></div>
-<div class="panel"><div class="panel-head"><h2>Meine Setups</h2><button id="clearSetups" class="text-btn">Alle löschen</button></div><div id="setupList" class="list"></div></div>
+<div class="grid two">
+<label>Strecke<select id="setupTrack" required></select></label>
+<label>Fahrzeughalter<input id="setupOwner" placeholder="z. B. Max Mustermann" required></label>
+</div>
+<div class="grid two">
+<label>Setup Name<input id="setupName" placeholder="Quali / Race" required></label>
+<label>Preset<input id="preset" placeholder="Low Downforce"></label>
+</div>
+<div class="setup-grid">
+<label>Front Wing<input id="frontWing" type="number" min="0" max="50"></label>
+<label>Rear Wing<input id="rearWing" type="number" min="0" max="50"></label>
+<label>Diff On<input id="diffOn" type="number" min="0" max="100"></label>
+<label>Diff Off<input id="diffOff" type="number" min="0" max="100"></label>
+<label>Front Camber<input id="frontCamber" type="number" step="0.1"></label>
+<label>Rear Camber<input id="rearCamber" type="number" step="0.1"></label>
+</div>
+<label>Notizen<textarea id="setupNote" rows="3" placeholder="Fahrgefühl, Reifen, Wetter..."></textarea></label>
+<button class="primary" type="submit">+ SETUP SPEICHERN</button>
+</form>
+</div>
+<div class="panel">
+<div class="panel-head"><h2>Meine Setups</h2><button id="clearSetups" class="text-btn">Alle löschen</button></div>
+<div id="setupList" class="list"></div>
+</div>
 </section>
-</main><footer>F1 LAP VAULT · lokale Speicherung</footer>
-</div><script src="app.js"></script>
-</body></html>
+</main>
+<footer>F1 LAP VAULT · lokale Speicherung</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
