@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07070a">
+<meta name="description" content="F1 Lap Vault – Rundenzeiten, Delta und F1-inspirierte Setups">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo.svg">
+<link rel="stylesheet" href="style.css">
+<title>F1 Lap Vault</title>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <button class="icon-button" aria-label="Menü">☰</button>
+    <div class="brand-lockup">
+      <img src="assets/logo.svg" alt="F1 Lap Vault">
+      <div><strong>Lap Vault</strong><span>Drive · Lap · Setup</span></div>
+    </div>
+    <button class="icon-button" aria-label="Einstellungen">⚙</button>
+  </header>
+
+  <main>
+    <section class="track-hero">
+      <div class="hero-photo" id="heroTrackArt" aria-hidden="true"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-topline"><span>F1 LAP VAULT</span><span>25/26</span></div>
+        <div class="hero-title">Drive · Lap · Setup</div>
+        <div class="track-selector-wrap">
+          <label for="track">Strecke</label>
+          <select id="track" required></select>
+        </div>
+        <div class="track-name" id="heroTrackName">Spielberg</div>
+        <div class="track-country" id="heroTrackCountry">Red Bull Ring</div>
+      </div>
+    </section>
+
+    <section class="driver-row">
+      <div class="glass-card compact-card">
+        <span class="card-icon">●</span><div><small>Fahrzeughalter</small><strong id="driverPreview">Noch nicht gesetzt</strong></div>
+      </div>
+      <div class="glass-card compact-card">
+        <span class="card-icon">◉</span><div><small>Session</small><strong id="sessionPreview">Time Trial</strong></div>
+      </div>
+    </section>
+
+    <section class="best-lap-card">
+      <div class="best-lap-bg"></div>
+      <div class="best-caption">🏆 Bestezeit</div>
+      <div class="best-time" id="heroBest">1:20.482</div>
+      <div class="delta-label">Delta</div>
+      <div class="best-delta" id="heroDelta">−0.214 ▼</div>
+    </section>
+
+    <nav class="bottom-tabs" aria-label="Hauptnavigation">
+      <button class="tab active" data-view="laps">◴<span>Runden</span></button>
+      <button class="tab" data-view="setup">⌁<span>Setup</span></button>
+    </nav>
+
+    <section id="lapsView" class="view active">
+      <div class="panel tire-panel">
+        <div class="panel-title"><span>◉ Reifenwahl</span></div>
+        <div class="tyre-picker" id="tyrePicker">
+          <button type="button" data-tyre="Soft" class="tyre soft active"><b>S</b><span>Soft</span></button>
+          <button type="button" data-tyre="Medium" class="tyre medium"><b>M</b><span>Medium</span></button>
+          <button type="button" data-tyre="Hard" class="tyre hard"><b>H</b><span>Hard</span></button>
+          <button type="button" data-tyre="Intermediate" class="tyre inter"><b>I</b><span>Inter</span></button>
+          <button type="button" data-tyre="Wet" class="tyre wet"><b>W</b><span>Wet</span></button>
+        </div>
+      </div>
+
+      <div class="panel lap-entry-panel">
+        <div class="panel-head"><div><h2>Neue Runde</h2><span>Rundenzeit und Delta speichern</span></div></div>
+        <form id="lapForm">
+          <input type="hidden" id="tyre" value="Soft">
+          <div class="time-row">
+            <label><span>MIN</span><input id="min" inputmode="numeric" maxlength="2" placeholder="1" required></label>
+            <b>:</b>
+            <label><span>SEK</span><input id="sec" inputmode="numeric" maxlength="2" placeholder="20" required></label>
+            <b>.</b>
+            <label><span>MS</span><input id="ms" inputmode="numeric" maxlength="3" placeholder="482" required></label>
+          </div>
+          <label>Fahrzeughalter<input id="owner" placeholder="z. B. Max Mustermann" required></label>
+          <div class="grid two">
+            <label>Session<select id="session"><option>Time Trial</option><option>Qualifying</option><option>Race</option><option>Practice</option></select></label>
+            <label>Delta zur Referenz<input id="delta" inputmode="decimal" placeholder="-0.214"></label>
+          </div>
+          <label>Notiz<textarea id="note" rows="2" placeholder="z. B. gutes Exit aus Kurve 10"></textarea></label>
+          <button class="primary big-button" type="submit">▶ &nbsp; RUNDE SPEICHERN</button>
+        </form>
+      </div>
+
+      <div class="panel list-panel">
+        <div class="panel-head"><div><h2>Rundenliste</h2><span>Beste Zeit zuerst</span></div><button id="clearLaps" class="danger-link">Alle löschen</button></div>
+        <div id="lapList" class="lap-table"></div>
+      </div>
+    </section>
+
+    <section id="setupView" class="view">
+      <div class="setup-top panel">
+        <div class="panel-head"><div><h2>Setup speichern</h2><span>F1-inspiriertes Rennsetup</span></div></div>
+        <div class="grid two">
+          <label>Strecke<select id="setupTrack" required></select></label>
+          <label>Fahrzeughalter<input id="setupOwner" placeholder="z. B. Max Mustermann" required></label>
+        </div>
+        <div class="grid two">
+          <label>Setup-Name<input id="setupName" placeholder="Qualifying Setup" required></label>
+          <label>Wetter<select id="weather"><option>Trocken</option><option>Nass</option></select></label>
+        </div>
+        <label>Setup-Notiz<textarea id="setupNote" rows="2" placeholder="Starke Balance, leichtes Untersteuern..."></textarea></label>
+      </div>
+
+      <div class="setup-tabs" role="tablist">
+        <button class="setup-tab active" data-setup-section="aero">⌁<span>Aerodynamik</span></button>
+        <button class="setup-tab" data-setup-section="suspension">⚙<span>Fahrwerk</span></button>
+        <button class="setup-tab" data-setup-section="brakes">◉<span>Bremsen</span></button>
+        <button class="setup-tab" data-setup-section="tyres">◎<span>Reifen</span></button>
+      </div>
+
+      <div class="setup-section-wrap panel" data-section="aero">
+        <h3>Aerodynamik</h3>
+        <div class="range-row"><label>Frontflügel</label><input id="frontWing" type="range" min="0" max="50" value="38"><output data-for="frontWing">38</output></div>
+        <div class="range-row"><label>Heckflügel</label><input id="rearWing" type="range" min="0" max="50" value="42"><output data-for="rearWing">42</output></div>
+        <hr>
+        <h3>Differential</h3>
+        <div class="range-row"><label>On-Throttle</label><input id="diffOn" type="range" min="10" max="100" value="70"><output data-for="diffOn">70%</output></div>
+        <div class="range-row"><label>Off-Throttle</label><input id="diffOff" type="range" min="10" max="100" value="65"><output data-for="diffOff">65%</output></div>
+      </div>
+
+      <div class="setup-section-wrap panel hidden" data-section="suspension">
+        <h3>Fahrwerksgeometrie</h3>
+        <div class="range-row"><label>Front-Sturz</label><input id="frontCamber" type="range" min="-3.5" max="-2.5" step="0.01" value="-3.50"><output data-for="frontCamber">-3.50°</output></div>
+        <div class="range-row"><label>Heck-Sturz</label><input id="rearCamber" type="range" min="-2.2" max="-0.7" step="0.01" value="-1.50"><output data-for="rearCamber">-1.50°</output></div>
+        <div class="range-row"><label>Front-Spur</label><input id="frontToe" type="range" min="0" max="0.5" step="0.01" value="0.10"><output data-for="frontToe">0.10°</output></div>
+        <div class="range-row"><label>Heck-Spur</label><input id="rearToe" type="range" min="0" max="0.5" step="0.01" value="0.20"><output data-for="rearToe">0.20°</output></div>
+        <hr><h3>Aufhängung</h3>
+        <div class="range-row"><label>Front-Federung</label><input id="frontSusp" type="range" min="1" max="41" value="7"><output data-for="frontSusp">7</output></div>
+        <div class="range-row"><label>Heck-Federung</label><input id="rearSusp" type="range" min="1" max="41" value="5"><output data-for="rearSusp">5</output></div>
+        <div class="range-row"><label>Front-Stabilisator</label><input id="frontArb" type="range" min="1" max="21" value="5"><output data-for="frontArb">5</output></div>
+        <div class="range-row"><label>Heck-Stabilisator</label><input id="rearArb" type="range" min="1" max="21" value="5"><output data-for="rearArb">5</output></div>
+        <div class="range-row"><label>Front-Fahrhöhe</label><input id="frontRide" type="range" min="10" max="40" value="24"><output data-for="frontRide">24 mm</output></div>
+        <div class="range-row"><label>Heck-Fahrhöhe</label><input id="rearRide" type="range" min="40" max="100" value="26"><output data-for="rearRide">26 mm</output></div>
+      </div>
+
+      <div class="setup-section-wrap panel hidden" data-section="brakes">
+        <h3>Bremsen</h3>
+        <div class="range-row"><label>Bremsdruck</label><input id="brakePressure" type="range" min="80" max="100" value="100"><output data-for="brakePressure">100%</output></div>
+        <div class="range-row"><label>Bremsbalance</label><input id="brakeBias" type="range" min="50" max="70" step="0.5" value="52"><output data-for="brakeBias">52%</output></div>
+      </div>
+
+      <div class="setup-section-wrap panel hidden" data-section="tyres">
+        <h3>Reifendruck</h3>
+        <div class="range-row"><label>VR Druck</label><input id="frPressure" type="range" min="18" max="30" step="0.1" value="22.0"><output data-for="frPressure">22.0 psi</output></div>
+        <div class="range-row"><label>VL Druck</label><input id="flPressure" type="range" min="18" max="30" step="0.1" value="22.0"><output data-for="flPressure">22.0 psi</output></div>
+        <div class="range-row"><label>HR Druck</label><input id="rrPressure" type="range" min="18" max="30" step="0.1" value="21.0"><output data-for="rrPressure">21.0 psi</output></div>
+        <div class="range-row"><label>HL Druck</label><input id="rlPressure" type="range" min="18" max="30" step="0.1" value="21.0"><output data-for="rlPressure">21.0 psi</output></div>
+      </div>
+
+      <button class="primary big-button" id="saveSetup" type="button">▣ &nbsp; SETUP SPEICHERN</button>
+      <div class="panel list-panel"><div class="panel-head"><div><h2>Meine Setups</h2></div><button id="clearSetups" class="danger-link">Alle löschen</button></div><div id="setupList" class="setup-list"></div></div>
+    </section>
+  </main>
+
+  <footer>F1 LAP VAULT · lokale Speicherung · unabhängiges Community-Tool</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
