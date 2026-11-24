@@ -1,0 +1,17 @@
+F1 RaceCompanion 25/26 v1.9.1 STABLE - Funktionspruefung
+
+PASS - 6 Hauptseiten
+PASS - Navigation
+PASS - Rennen speichern
+PASS - Zeitvalidierung
+PASS - Punkte P1-P10
+PASS - Season
+PASS - Setups speichern
+PASS - Setup Kategorien
+PASS - Audi
+PASS - Version sichtbar
+PASS - Hintergrund vorhanden
+PASS - 24 Streckenbilder vorhanden
+
+Ergebnis: STABLE Kandidat - alle statischen Regressionstests bestanden.
+Hinweis: Browser-/Touch-End-to-End-Interaktion wurde in dieser Umgebung nicht automatisiert ausgefuehrt.

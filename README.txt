@@ -1,2 +1,2 @@
-F1 RaceCompanion 25/26 V1.9
-Setup-Seite vollständig nach den F1-25-Spielkategorien aufgebaut: Aerodynamik, Getriebe, Radaufhängungsgeometrie, Radaufhängung, Bremsen und Reifen. Vier einzelne Reifendrücke, Session-Typ und mehrere Setups je Strecke.
+F1 RaceCompanion 25/26 v1.9.1 STABLE
+Versionsnummer jetzt sichtbar im App-Header. Statische Regressionstests fuer Navigation, Speicherung, Punkte, Saison, Setups, Audi, Assets und Version bestanden.
