@@ -1,2 +1,2 @@
-F1 RaceCompanion 25/26 V1.6
-Fix: Saison-Seite zeigt jetzt Rennen, Gesamtpunkte, Siege, Podien, Poles, Punkteränge sowie alle Saisonergebnisse mit Team, Qualifying, Ergebnis und Punkten.
+F1 RaceCompanion 25/26 V1.9
+Setup-Seite vollständig nach den F1-25-Spielkategorien aufgebaut: Aerodynamik, Getriebe, Radaufhängungsgeometrie, Radaufhängung, Bremsen und Reifen. Vier einzelne Reifendrücke, Session-Typ und mehrere Setups je Strecke.
