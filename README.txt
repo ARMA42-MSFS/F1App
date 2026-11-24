@@ -1,2 +1,2 @@
-F1 RaceCompanion 25/26 V1.5
-Fix: Skalierung der Streckenbilder korrigiert. Die 1:1-Assets werden nun vollständig und ohne Beschnitt angezeigt (aspect-ratio 1:1 + object-fit: contain).
+F1 RaceCompanion 25/26 V1.6
+Fix: Saison-Seite zeigt jetzt Rennen, Gesamtpunkte, Siege, Podien, Poles, Punkteränge sowie alle Saisonergebnisse mit Team, Qualifying, Ergebnis und Punkten.
