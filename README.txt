@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.12.2
-Streckendetail exakt nach Layoutidee: Panorama oben, separate schematische Karte im Liquid Glass, zwei PB-Kacheln. Neu: Qualifying kann zwischengespeichert und das Rennen später ergänzt werden.
+RaceCompanion 25/26 v1.13.0 MULTI-SEASON
+Mehrere Saisons, aktive/archivierte Saison, saisonbezogene Statistik und Strecken-PBs, All-Time-PBs, Qualifying-Draft je Saison und gemeinsames Backup. Alte v1.12.x Rennen ohne Saison werden automatisch 2026 zugeordnet.
