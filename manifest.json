@@ -1,22 +1,22 @@
 {
-  "id": "./?v=1.12.1",
+  "id": "./?v=1.12.2",
   "name": "RaceCompanion 25/26",
   "short_name": "RaceCompanion",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#08080c",
-  "theme_color": "#15151e",
+  "background_color": "#06101c",
+  "theme_color": "#071220",
   "icons": [
     {
-      "src": "racecompanion-icon-v3-192.png",
+      "src": "appicon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "racecompanion-icon-v3-512.png",
+      "src": "appicon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
