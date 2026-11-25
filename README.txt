@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.13.0 MULTI-SEASON
-Mehrere Saisons, aktive/archivierte Saison, saisonbezogene Statistik und Strecken-PBs, All-Time-PBs, Qualifying-Draft je Saison und gemeinsames Backup. Alte v1.12.x Rennen ohne Saison werden automatisch 2026 zugeordnet.
+RaceCompanion 25/26 v1.14.0 FEATURES
+Neu: Saisonkalender, offenes Rennwochenende auf Home, Fahrerform letzte 5, vollstaendige Spiel-Setupfelder + Favorit + Setup-Verknuepfung zum Rennen + Setup-Erfolg, Saisonvergleich und All-Time-Fahrerprofil. Multi-Season bleibt enthalten.
