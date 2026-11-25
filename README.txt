@@ -1,2 +1,2 @@
-F1 RaceCompanion 25/26 v1.10.0
-Redesign: professioneller Formula-Racing-Look mit F1-Rot, Schwarz, Weiss, kantigen Cards, Racing-Typografie, tabellarischen Zeiten und klarerer Navigation. Bestehende Funktionen aus v1.9.3 inklusive Android-PWA und mobiler Zeiteingabe bleiben erhalten.
+F1 RaceCompanion 25/26 v1.11.1
+Neues modernes und freundlicheres App-Icon eingebunden. Icon wird im App-Header, im PWA-Manifest und fuer Android 192x192 / 512x512 verwendet. Service-Worker-Cache auf v1.11.1 aktualisiert.
