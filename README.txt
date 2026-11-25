@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.16.2 UX
-Renneneingabe weiter vereinfacht: Wetter, Tageszeit und Eingabegeraet entfernt. Die neue dreigeteilte Handy-Zeiteingabe bleibt erhalten. Alle Streckenbilder und v1.16 UX-Funktionen bleiben enthalten.
+RaceCompanion 25/26 v1.16.4 UX
+Zeiteingabe: Minutenfeld auf genau eine Ziffer reduziert. Nach Eingabe der ersten Minuten-Ziffer springt der Fokus automatisch zu Sekunden; nach 2 Sekunden-Ziffern zu den 3 Tausendstel-Ziffern.
