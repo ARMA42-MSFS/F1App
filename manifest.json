@@ -1,24 +1,22 @@
 {
-  "id": "./",
-  "name": "F1 RaceCompanion 25/26",
-  "short_name": "F1 Companion",
-  "description": "Persoenlicher F1 Race Companion fuer Ergebnisse, Statistik, Setups und Streckenrekorde.",
+  "id": "./?v=1.11.3",
+  "name": "RaceCompanion 25/26",
+  "short_name": "RaceCompanion",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#03101f",
-  "theme_color": "#06172b",
-  "prefer_related_applications": false,
+  "background_color": "#08080c",
+  "theme_color": "#15151e",
   "icons": [
     {
-      "src": "icon-modern-192.png",
+      "src": "racecompanion-icon-v3-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-modern-512.png",
+      "src": "racecompanion-icon-v3-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
