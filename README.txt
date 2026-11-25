@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.14.0 FEATURES
-Neu: Saisonkalender, offenes Rennwochenende auf Home, Fahrerform letzte 5, vollstaendige Spiel-Setupfelder + Favorit + Setup-Verknuepfung zum Rennen + Setup-Erfolg, Saisonvergleich und All-Time-Fahrerprofil. Multi-Season bleibt enthalten.
+RaceCompanion 25/26 v1.14.2 CLOCK FIX
+Fix: Guten-Abend-Begruessung vollständig entfernt. Home zeigt stattdessen die lokale Android-Uhrzeit HH:MM:SS und darunter nur die aktive Saison. Alle 24 Panorama- und 24 Map-Streckenassets sowie v1.14.x Funktionen bleiben enthalten.
