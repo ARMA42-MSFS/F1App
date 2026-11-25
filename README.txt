@@ -1,10 +1,2 @@
-F1 RaceCompanion 25/26 v1.9.2 PWA
-
-Android-Installation repariert:
-- Web App Manifest im HTML eingebunden
-- 192x192 + 512x512 App-Icons
-- Service Worker / Offline Cache
-- start_url, scope, display=standalone
-- Installieren-Schaltflaeche bei Browser-Unterstuetzung
-
-WICHTIG: Eine PWA muss ueber HTTPS (oder localhost zum Testen) bereitgestellt werden. Direktes Oeffnen von index.html aus einer ZIP/Datei kann nicht als Android-PWA installiert werden.
+F1 RaceCompanion 25/26 v1.9.3 PWA
+Fix fuer Android-Zeiteingabe: Qualifying- und Rundenzeiten koennen auf der Zahlentastatur ohne Doppelpunkt/Punkt eingegeben werden. Beispiel 142580 wird automatisch zu 1:42.580. Beim Verlassen des Feldes wird die Zeit formatiert.
