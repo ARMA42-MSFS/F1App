@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.17.1 UX
-Zeitfahren ist jetzt eine eigene Auswahl im unteren Hauptmenue. Im Zeitfahren stehen alle Strecken in einer Dropdown-Auswahl zur Verfuegung. Beste Zeit und Team werden je Strecke separat gespeichert.
+RaceCompanion 25/26 v1.17.3 UX
+Korrektur: Zeitfahren ist vollstaendig befuellt und funktionsfaehig. Alle Strecken stehen im Dropdown. Setup- und Garage-Bereich sind aus der Benutzeroberflaeche vollstaendig entfernt. Helleres Liquid-Glass-Design bleibt erhalten.
