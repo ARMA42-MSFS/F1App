@@ -1,13 +1,13 @@
 {
-  "id": "./?v=1.18.2",
+  "id": "./?v=1.18.4",
   "name": "RaceCompanion 25/26",
   "short_name": "RaceCompanion",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#06101c",
-  "theme_color": "#071220",
+  "background_color": "#0d2843",
+  "theme_color": "#173d61",
   "icons": [
     {
       "src": "appicon-192.png",

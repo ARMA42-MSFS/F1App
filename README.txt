@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.18.2 UX
-Setup-Bereich aus der sichtbaren Benutzeroberflaeche entfernt, einschliesslich Verwendetes Setup in Rennen erfassen. Zeitfahren bleibt im korrekten Seitencontainer. Duplikatkontrolle und Speicherbestaetigung bleiben erhalten.
+RaceCompanion 25/26 v1.18.4 STABLE
+Basis: hochgeladene v1.16.4 ohne Bilddateien. Zeitfahren mit direkt befuellten Strecken- und Team-Dropdowns, Setup aus der sichtbaren UI entfernt, Rennen je Saison/Strecke nur einmal, Speicherbestaetigungen, fehlertolerante Streckenansicht ohne Assets und zweistufig gesicherter Komplett-Reset. Bilddateien koennen spaeter unveraendert in denselben Ordner gelegt werden.
