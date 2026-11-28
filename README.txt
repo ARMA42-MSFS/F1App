@@ -1,2 +1,2 @@
-RaceCompanion 25/26 v1.17.6 UX
-Rennspeicherung repariert: Pflichtfeld-/Zeitpruefung, Duplikatkontrolle pro Saison + Strecke vor dem Speichern und Erfolgsbestaetigung mit Strecke + Saison. Zeitfahren bleibt erhalten.
+RaceCompanion 25/26 v1.18.2 UX
+Setup-Bereich aus der sichtbaren Benutzeroberflaeche entfernt, einschliesslich Verwendetes Setup in Rennen erfassen. Zeitfahren bleibt im korrekten Seitencontainer. Duplikatkontrolle und Speicherbestaetigung bleiben erhalten.
